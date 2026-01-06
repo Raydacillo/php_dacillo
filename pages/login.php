@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <h1>Login</h1>
@@ -14,5 +14,8 @@
         <Label for="username">Password</Label>
         <input type="text" id="password" class="password" name="password">
         <button type="submit">login</button>
+
+        <?php
+        echo("hello world"); ?>
 </body>
 </html>
