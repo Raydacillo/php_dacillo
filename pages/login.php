@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <div1></div1>
     <h1>Login</h1>
     <form action="">
-        <Label for="username">Username</Label>
-        <input type="text" id="username" class="username" name="username">
-        <Label for="username">Password</Label>
-        <input type="text" id="password" class="password" name="password">
-        <button type="submit">login</button>
+        <Label for="username">Username</Label> <br>
+        <input type="text" id="username" class="username" name="username"> <br> <br>
+        <Label for="username">Password</Label> <br>
+        <input type="text" id="password" class="password" name="password"> <br> <br>
+</form>
 
-        <?php
-        echo("hello world"); ?>
+        <button type="submit">login</button> <br>
+   
+       
 </body>
 </html>
