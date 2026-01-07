@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div1></div1>
+    <div class="div1">
     <h1>Login</h1>
-    <form action="">
+    <form action="functions/loginFunction.php" method="POST">
         <Label for="username">Username</Label> <br>
         <input type="text" id="username" class="username" name="username"> <br> <br>
         <Label for="username">Password</Label> <br>
-        <input type="text" id="password" class="password" name="password"> <br> <br>
+        <input type="password" id="password" class="password" name="password"> <br> <br>
+        <button type="submit">login</button> <br>
+    </div>
 </form>
 
-        <button type="submit">login</button> <br>
+        
    
-       
+
 </body>
 </html>
