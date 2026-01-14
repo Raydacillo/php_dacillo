@@ -1,7 +1,7 @@
  <nav>
-        <a href="about">Home</a>
-        <a href="skills">Create</a>
-        <a href="projects">Retrieve</a>
-        <a href="contact">Update</a>
-        <a href="contact">Delete</a>
+        <a href="Home">Home</a>
+        <a href="createPage.php">Create</a>
+        <a href="retrievePage.php">Retrieve</a>
+        <a href="updatePage.php">Update</a>
+        <a href="deletePage.php">Delete</a>
     </nav>

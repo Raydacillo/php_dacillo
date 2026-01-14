@@ -48,18 +48,18 @@ body {
 
 
 
-nav {
+.nav {
     margin: 20px 0;
 }
 
-nav a {
+.nav a {
     color: var(--text-color);
     text-decoration: none;
     margin: 0 15px;
     font-weight: 500;
 }
 
-nav a:hover {
+.nav a:hover {
     color: var(--primary-color);
 }
 
