@@ -46,9 +46,5 @@ include "resources/navigators.php";
     }
 ?>
 </table>
-
-
 </body>
-
-
 </html>
