@@ -41,7 +41,7 @@ include "resources/header.php";
                 <td><?= $item["age"] ?> </td>
                 <td><?= $item["address"] ?> </td>
                 <td><?= $item["username"] ?> </td>
-                <td><button>view</button></td>
+                <td><a href="viewPage.php?user_id=<?=$item['user_id'] ?>">view</a></td>
             </tr>
         <?php
         }
