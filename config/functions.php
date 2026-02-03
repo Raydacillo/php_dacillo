@@ -37,4 +37,16 @@ $stmnt->execute([
  return $stmnt->fetchAll(PDO::FETCH_ASSOC);
 
 }
+
+function getproducts($prod_id){
+include "connection.php";
+
+$sql = "SELECT *  FROM products WHERE prod_id = :id";
+$stmnt = $conn -> prepare($sql);
+$stmnt->execute([
+  "id" =>  $prod_id
+]);
+
+ return $stmnt->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
