@@ -1,7 +1,7 @@
 <?php
 include "../config/includes.php";
 $list = retrieveAllUsers();
-
+$lest = retrieveAllproducts();
 // echo json_encode($list);
 ?>
 
@@ -51,11 +51,14 @@ include "resources/header.php";
             <th>prod_type</th>
             <th>prod_price</th>
             <th>prod_date_added</th>
-        
+
         </tr>
-        <?php
-            foreach ($list as $item)
-        ?>
+    <?php
+        }
+    ?>
+    <?php
+    foreach ($lest as $item) {
+    ?>
         <tr>
             <td><?= $item["prod_name"] ?> </td>
             <td><?= $item["prod_quantity"] ?> </td>
@@ -65,7 +68,7 @@ include "resources/header.php";
             <td><a href="viewPageProd.php?prod_id=<?= $item['prod_id'] ?>">view</a></td>
         </tr>
     <?php
-        }
+    }
     ?>
     </table>
 </body>

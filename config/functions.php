@@ -10,6 +10,18 @@ return $stmnt;
 
 return $stmnt->fetchAll(PDO::FETCH_ASSOC);
 }
+
+function retrieveAllproducts(){
+include "connection.php";
+
+
+$sql = "SELECT * FROM products";
+$stmnt = $conn -> prepare($sql);
+$stmnt->execute();
+return $stmnt;
+
+return $stmnt->fetchAll(PDO::FETCH_ASSOC);
+}
 function loginAuth($usernames, $passwords){
     include "connection.php";
  
