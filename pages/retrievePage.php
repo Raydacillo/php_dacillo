@@ -43,6 +43,9 @@ include "resources/header.php";
                 <td><?= $item["username"] ?> </td>
                 <td><a href="viewPage.php?user_id=<?= $item['user_id'] ?>">view</a></td>
             </tr>
+             <?php
+        }
+    ?>
     </table>
     <table>
         <tr>
@@ -53,9 +56,7 @@ include "resources/header.php";
             <th>prod_date_added</th>
 
         </tr>
-    <?php
-        }
-    ?>
+    
     <?php
     foreach ($lest as $item) {
     ?>

@@ -22,18 +22,19 @@ include "resources/header.php";
     <?php
     include "resources/navigation.php";
     ?>
-    <label action="" method="POST">
-        <label for="user_name">Name</label>
-        <input name="user_name" type="text" value="<?= $getUser[0]['names'] ?>">
-        <label for="user_name">Age</label>
-        <input name="user_name" type="number" value="<?= $getUser[0]['age'] ?>">
-        <label for="user_name">Address</label>
-        <input name="user_name" type="number" value="<?= $getUser[0]['address'] ?>">
-        <label for="user_name">Username</label>
-        <input name="user_name" type="number" value="<?= $getUser[0]['username'] ?>">
-        <label for="user_name">Password</label>
-        <input name="user_name" type="number" value="<?= $getUser[0]['password'] ?>">
+    <label action="functions/updateuser" method="POST">
+        <label for="names">Name</label>
+        <input name="names" type="text" value="<?= $getUser[0]['names'] ?>">
+        <label for="age">Age</label>
+        <input name="age" type="number" value="<?= $getUser[0]['age'] ?>">
+        <label for="address">Address</label>
+        <input name="address" type="text" value="<?= $getUser[0]['address'] ?>">
+        <label for="username">Username</label>
+        <input name="username" type="text" value="<?= $getUser[0]['username'] ?>">
+        <label for="password">Password</label>
+        <input name="password" type="text" value="<?= $getUser[0]['password'] ?>">
+        
+        <input type="text" name="user_id" value="<?= $getUser[0]['user_id'] ?>"hidden>
         <button>EDIT</button>
 
 </body>
-<a href="">Edit</a>

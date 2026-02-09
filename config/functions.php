@@ -63,18 +63,26 @@ $stmnt->execute([
 }
 
 
-function updateUser($user_id){
+function updateUser($userid, $name, $age, $address, $username, $password){
 include "connection.php";
 
-$sql = "SELECT *  FROM user WHERE user_id = :id";
+$sql = "UPDATE user SET name= :name, age= :age, address= :address, username= :username password= :password WHERE userid =:userid";
 $stmnt = $conn -> prepare($sql);
 $stmnt->execute([
-  "id" =>  $user_id
+ "names" => $names,
+    "age" => $age,
+    "address" => $address,
+    "username" => $username,
+    "password" => $password,
+    "user_id" => $userid
 ]);
 
  return $stmnt->fetchAll(PDO::FETCH_ASSOC);
 
 }
+
+
+
 
 
 ?>
