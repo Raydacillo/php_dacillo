@@ -22,7 +22,8 @@ include "resources/header.php";
     <?php
     include "resources/navigation.php";
     ?>
-    <label action="functions/updateuser" method="POST">
+
+    <form action="functions/updateuser.php" method="POST">
         <label for="names">Name</label>
         <input name="names" type="text" value="<?= $getUser[0]['names'] ?>">
         <label for="age">Age</label>
@@ -36,5 +37,5 @@ include "resources/header.php";
         
         <input type="text" name="user_id" value="<?= $getUser[0]['user_id'] ?>"hidden>
         <button>EDIT</button>
-
+    </form>
 </body>

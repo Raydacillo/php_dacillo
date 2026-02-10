@@ -63,25 +63,41 @@ $stmnt->execute([
 }
 
 
-function updateUser($userid, $name, $age, $address, $username, $password){
+function updateUser($userid, $names, $age, $address, $usernames, $passwords){
 include "connection.php";
 
-$sql = "UPDATE user SET name= :name, age= :age, address= :address, username= :username password= :password WHERE userid =:userid";
+$sql = "UPDATE user SET names= :names, age= :age, address= :address, username= :username, password= :password WHERE user_id =:userid";
 $stmnt = $conn -> prepare($sql);
 $stmnt->execute([
  "names" => $names,
     "age" => $age,
     "address" => $address,
-    "username" => $username,
-    "password" => $password,
-    "user_id" => $userid
+    "username" => $usernames,
+    "password" => $passwords,
+    "userid" => $userid
 ]);
 
- return $stmnt->fetchAll(PDO::FETCH_ASSOC);
+ return $stmnt;
 
 }
 
+function updateproducts($prodid, $prodname, $prodquan, $prodtype, $prodprice, $proddate){
+include "connection.php";
 
+$sql = "UPDATE user SET names= :names, age= :age, address= :address, username= :username, password= :password WHERE user_id =:userid";
+$stmnt = $conn -> prepare($sql);
+$stmnt->execute([
+ "prodname" => $prodname,
+    "age" => $age,
+    "prodquantity" => $prodquan,
+    "prodtype" => $prodtype,
+    "password" => $passwords,
+    "prodid" => $prodid
+]);
+
+ return $stmnt;
+
+}
 
 
 
