@@ -3,6 +3,13 @@ include "../config/includes.php";
 $list = retrieveAllUsers();
 $lest = retrieveAllproducts();
 // echo json_encode($list);
+
+if (isset($_GET['status'])) {
+if ($_GET['status'] == 'ok') 
+  echo "<script> alert('Value Deleted Successfully') </script>";
+}else if ($_GET['status'] == 'no') {
+ echo "<script> alert('Value Deleted Successfully') </script>";
+}
 ?>
 
 
@@ -42,7 +49,7 @@ include "resources/header.php";
                 <td><?= $item["address"] ?> </td>
                 <td><?= $item["username"] ?> </td>
                 <td><a href="viewPage.php?user_id=<?= $item['user_id'] ?>">view</a>
-                <a href="">Delete</a>
+                 <a href="functions/deletefunction.php?deleteFrom=user&id=<?= $item['user_id'] ?>">Delete</a>
             </td>
             </tr>
              <?php
@@ -69,7 +76,7 @@ include "resources/header.php";
             <td><?= $item["prod_price"] ?> </td>
             <td><?= $item["prod_date_added"] ?> </td>
             <td><a href="viewPageProd.php?prod_id=<?= $item['prod_id'] ?>">view</a>
-          <a href="">Delete</a>
+         <a href="functions/deletefunction.php?deleteFrom=product&id=<?= $item['prod_id'] ?>">delete</a>
         </td>
         </tr>
     <?php

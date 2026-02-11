@@ -100,5 +100,32 @@ $stmnt->execute([
 }
 
 
+function deleteuser($id)
+{
+    include "connection.php";
+
+    $sql = "DELETE FROM user WHERE user_id = :id";
+    $stmnt = $conn->prepare($sql);
+    $stmnt->execute([
+    "id" => $id
+
+    ]);
+    return $stmnt;
+}
+
+function deleteProduct($id)
+{
+    include "connection.php";
+
+    $sql = "DELETE FROM products WHERE prod_id = :id";
+    $stmnt = $conn->prepare($sql);
+    $stmnt->execute([
+    "id" => $id
+
+    ]);
+    return $stmnt;
+}
+
+
 
 ?>
