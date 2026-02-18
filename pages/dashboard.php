@@ -18,6 +18,6 @@ include "resources/header.php";
         include "resources/navigation.php";
      ?>
 
-    <h1>welcom to the page  <?= $name ?> Paka ka dol </h1>
+    <h1>welcome to the page  <?= $name ?> Paka ka dol </h1>
 </body>
 </html>
